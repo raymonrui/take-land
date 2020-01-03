@@ -9,7 +9,7 @@ Demonstrates how to arm and takeoff in Copter and how to navigate to points usin
 
 from __future__ import print_function
 import time
-from dronekit import connect, VehicleMode, LocationGlobalRelative
+from dronekit import connect, VehicleMode
 
 
 
