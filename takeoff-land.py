@@ -12,14 +12,15 @@ import time
 from dronekit import connect, VehicleMode
 
 
-
-connection_string ='127.0.0.1:14550' 
+connection_string ='127.0.0.1:14551' 
 print('Connecting to vehicle on: %s' % connection_string)
 
 vehicle = connect(connection_string, wait_ready=True)
 
+
+
 def arm_and_takeoff(aTargetAltitude):
- 
+     
     print("Basic pre-arm checks")
    
     while not vehicle.is_armable:
@@ -51,10 +52,9 @@ def arm_and_takeoff(aTargetAltitude):
       
         time.sleep(1)
 
-arm_and_takeoff(3)
+arm_and_takeoff(10)
 
 
 print("Returning to Launch")
+vehicle.mode = VehicleMode("LAND")
 
-print("Close vehicle object")
-vehicle.close()
