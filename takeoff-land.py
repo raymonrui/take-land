@@ -52,7 +52,7 @@ def arm_and_takeoff(aTargetAltitude):
       
         time.sleep(1)
 
-arm_and_takeoff(10)
+arm_and_takeoff(10)#因为RTL模式默认会先升到15m，在RTL，所以设置10，也会先升到15，在降落
 
 
 print("Returning to Launch")
